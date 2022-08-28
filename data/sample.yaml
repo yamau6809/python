@@ -1,0 +1,26 @@
+aip:
+  connection_string: 'BlobEndpoint=https://stgabpinventorypoc01.blob.core.windows.net/;QueueEndpoint=https://stgabpinventorypoc01.queue.core.windows.net/;FileEndpoint=https://stgabpinventorypoc01.file.core.windows.net/;TableEndpoint=https://stgabpinventorypoc01.table.core.windows.net/;SharedAccessSignature=sv=2021-06-08&ss=b&srt=sco&sp=rwdlacitfx&se=2023-07-19T03:51:01Z&st=2022-07-18T19:51:01Z&spr=https&sig=iwgdqRETDUDbqz9jh%2Bhi7KPB2%2F1%2Bxq45a19Dl9pdfLI%3D'
+  master_container_name: 'blob-abp-jcp-staging-01'
+  eh_container_name: 'bloc-abp-inventory-jcp-poc-01'
+  eh_connection_string: 'Endpoint=sb://abpinventorypoc01.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=pjE3m/P1Ac5rUs+xZ63W5Z/6k89gJxgJTaJjWxx3C4w='
+  eh_name: 'eh-abp-inventory-jcp-poc-01'
+  private_key_path: '/home/aipuser/.aip/sf_rsa_key.p8'
+  account_identifier: ov40102.east-us-2.azure
+  user_login_name: DEV_PLAN_ABP_API_SERVICE_USER
+  db_name: DEV_PLAN_ABP_DB
+  schema_name: AIP_DEV_SCHEMA
+  pipe_name: AIP_EH_PIPE
+  warehouse_name: DEV_PLAN_ABP_ADHOC_ALL_WH
+lde:
+  connection_string: 'BlobEndpoint=https://stgabpinventorypoc01.blob.core.windows.net/;QueueEndpoint=https://stgabpinventorypoc01.queue.core.windows.net/;FileEndpoint=https://stgabpinventorypoc01.file.core.windows.net/;TableEndpoint=https://stgabpinventorypoc01.table.core.windows.net/;SharedAccessSignature=sv=2021-06-08&ss=b&srt=sco&sp=rwdlacitfx&se=2023-07-19T03:51:01Z&st=2022-07-18T19:51:01Z&spr=https&sig=iwgdqRETDUDbqz9jh%2Bhi7KPB2%2F1%2Bxq45a19Dl9pdfLI%3D'
+  master_container_name: 'blob-abp-jcp-staging-01'
+  eh_container_name: 'bloc-abp-inventory-jcp-poc-01'
+  eh_connection_string: 'Endpoint=sb://abpinventorypoc01.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=pjE3m/P1Ac5rUs+xZ63W5Z/6k89gJxgJTaJjWxx3C4w='
+  eh_name: 'eh-abp-inventory-jcp-poc-01'
+  private_key_path: '/home/aipuser/.aip/sf_rsa_key.p8'
+  account_identifier: ov40102.east-us-2.azure
+  user_login_name: DEV_PLAN_ABP_API_SERVICE_USER
+  db_name: DEV_PLAN_ABP_DB
+  schema_name: AIP_DEV_SCHEMA
+  pipe_name: AIP_EH_PIPE
+  warehouse_name: DEV_PLAN_ABP_ADHOC_ALL_WH
