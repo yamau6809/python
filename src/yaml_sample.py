@@ -16,6 +16,7 @@ _LOG_LEVEL_MAP = {
 
 def traverse_yaml_value(node):
     """Traverse Yaml value."""
+    logging.info(node)
     if not isinstance(node, dict):
         logging.info(node)
         return [node]
@@ -27,6 +28,7 @@ def traverse_yaml_value(node):
 
 def traverse_yaml_key_dfs(node):
     """Traverse Yaml Key."""
+    logging.info(node)
     ret = []
     for key, value in node.items():
         if not isinstance(value, dict):
@@ -42,12 +44,11 @@ def traverse_yaml_key_dfs(node):
 def traverse_yaml_key_bfs(node):
     """Traverse Yaml Key."""
     ret = []
-    for key, value in node.items():
-        if not isinstance(value, dict):
-            logging.info(key)
-            ret.append(key)
-        else:
-            ret += traverse_yaml_key_bfs(value)
+    logging.info(node)
+    for k in node:
+        logging.info(k)
+        ret.append(k)
+        
     return ret
 
 
@@ -82,8 +83,8 @@ def yaml_sample(log_level, yaml_file, other_yaml_file):
     logging.info(key_list)
     key_list = traverse_yaml_key_bfs(node=yaml_sample_obj)
     logging.info(key_list)
-    value_list = traverse_yaml_value(node=yaml_sample_obj)
-    logging.info(value_list)
+    # value_list = traverse_yaml_value(node=yaml_sample_obj)
+    # logging.info(value_list)
     if other_yaml_file is not None:
         other_yaml_obj = yaml.load(
             stream=other_yaml_file, Loader=yaml.SafeLoader)
